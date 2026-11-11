@@ -6,6 +6,8 @@
         <h2>Gestión de Clientes</h2>
         <div>
           <el-button type="primary" @click="abrirModalNuevo">Nuevo Cliente</el-button>
+          <!-- NUEVO BOTÓN AQUÍ -->
+          <el-button type="success" @click="$router.push('/motos')">Ir a Motos</el-button> 
           <el-button type="danger" @click="cerrarSesion">Cerrar Sesión</el-button>
         </div>
       </div>

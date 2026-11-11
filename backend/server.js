@@ -27,3 +27,21 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
 });
+
+const motosRoutes = require('./routes/motosRoutes'); 
+
+// ... (donde están los app.use)
+app.use('/api/clientes', clientesRoutes);
+app.use('/api/motos', motosRoutes);
+
+const citasRoutes = require('./routes/citasRoutes');
+
+// ... (otros app.use)
+app.use('/api/motos', motosRoutes);
+app.use('/api/citas', citasRoutes);
+
+const insumosRoutes = require('./routes/insumosRoutes'); 
+
+// ... (tus otros app.use)
+app.use('/api/citas', citasRoutes);
+app.use('/api/insumos', insumosRoutes); 
